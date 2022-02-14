@@ -83,7 +83,7 @@ resource "aws_s3_bucket" "operations" {
   bucket = "${local.resource_prefix.value}-operations"
   acl    = "private"
 
-  force_destroy = true
+
   tags = merge({
     Name        = "${local.resource_prefix.value}-operations"
     Environment = local.resource_prefix.value
