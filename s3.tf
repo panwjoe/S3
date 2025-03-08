@@ -11,7 +11,7 @@ resource "aws_s3_bucket" "data" {
     Environment = local.resource_prefix.value
     }, {
     git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/s3.tf"
+    git_file             = "terraform/aws/ec2.tf"
     git_last_modified_at = "2020-06-16 14:46:24"
     git_last_modified_by = "nimrodkor@gmail.com"
     git_modifiers        = "nimrodkor"
@@ -44,7 +44,7 @@ resource "aws_s3_bucket_object" "data_object" {
     Environment = local.resource_prefix.value
     }, {
     git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/s3.tf"
+    git_file             = "terraform/aws/ec2.tf"
     git_last_modified_at = "2020-06-16 14:46:24"
     git_last_modified_by = "nimrodkor@gmail.com"
     git_modifiers        = "nimrodkor"
@@ -66,7 +66,7 @@ resource "aws_s3_bucket" "financials" {
     Environment = local.resource_prefix.value
     }, {
     git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/s3.tf"
+    git_file             = "terraform/aws/ec2.tf"
     git_last_modified_at = "2020-06-16 14:46:24"
     git_last_modified_by = "nimrodkor@gmail.com"
     git_modifiers        = "nimrodkor"
@@ -89,7 +89,7 @@ resource "aws_s3_bucket" "operations" {
     Environment = local.resource_prefix.value
     }, {
     git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/s3.tf"
+    git_file             = "terraform/aws/ec2.tf"
     git_last_modified_at = "2020-06-16 14:46:24"
     git_last_modified_by = "nimrodkor@gmail.com"
     git_modifiers        = "nimrodkor"
@@ -107,10 +107,10 @@ resource "aws_s3_bucket" "data_science" {
   versioning {
     enabled = Flase
   }
-  
 
-  
-  
+
+
+
   logging {
     target_bucket = "${aws_s3_bucket.logs.id}"
     target_prefix = "log/"
@@ -118,7 +118,7 @@ resource "aws_s3_bucket" "data_science" {
   force_destroy = true
   tags = {
     git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/s3.tf"
+    git_file             = "terraform/aws/ec2.tf"
     git_last_modified_at = "2020-06-16 14:46:24"
     git_last_modified_by = "nimrodkor@gmail.com"
     git_modifiers        = "nimrodkor"
@@ -148,7 +148,7 @@ resource "aws_s3_bucket" "logs" {
     Environment = local.resource_prefix.value
     }, {
     git_commit           = "d68d2897add9bc2203a5ed0632a5cdd8ff8cefb0"
-    git_file             = "terraform/aws/s3.tf"
+    git_file             = "terraform/aws/ec2.tf"
     git_last_modified_at = "2020-06-16 14:46:24"
     git_last_modified_by = "nimrodkor@gmail.com"
     git_modifiers        = "nimrodkor"
